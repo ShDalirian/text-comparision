@@ -21,7 +21,7 @@ here is some examples:<br/>
 ideal_text:str= "this is a test\nmy email address is: sh.dalirian@ut.ac.ir\nwww.x_code.com\ntime is come\n"<br/>
 text:str=       "this is a test\nmy email address is: sh.dalirian@ut.ac.ir\nwww.x_code.com\ntime is come\n"<br/>
 accuracy,correct_char_N,total_N=accuracy_cal(text,ideal_text,ignor_space=False,less_than_char_ignore=True,ignor_char_num=1)
-print("accuracy = "+str(accuracy)+"\ntotal length = ",str(total_N)+"\ncorrect char length = ",str(correct_char_N))
+print("accuracy = "+str(accuracy)+"\ntotal length = "+str(total_N)+"\ncorrect char length = "+str(correct_char_N))
 the result is :<br/>
 &emsp;{accuracy = 100.0<br/>
 &emsp;total length =  85<br/>
@@ -32,7 +32,7 @@ ideal_text:str= "this is a test\nmy email address is: sh.dalirian@ut.ac.ir\nwww.
 text:str=       "this is a test\nmy email address is: sh.dalirian@ut.ac.ir\nwww.x_code.com\ntime iscome\n"<br/>
 
 accuracy,correct_char_N,total_N=accuracy_cal(text,ideal_text,ignor_space=False,less_than_char_ignore=True,ignor_char_num=1)<br/>
-print("accuracy = "+str(accuracy)+"\ntotal length = ",str(total_N)+"\ncorrect char length = ",str(correct_char_N))<br/>
+print("accuracy = "+str(accuracy)+"\ntotal length = "+str(total_N)+"\ncorrect char length = "+str(correct_char_N))<br/>
 the result is :<br/>
 &emsp;{accuracy = 89.41176470588236<br/>
 &emsp;total length =  85<br/>
@@ -43,7 +43,7 @@ ideal_text:str= "this is a test\nmy email address is: sh.dalirian@ut.ac.ir\nwww.
 text:str=       "this is a test\nmy email address is: sh.dalirian@ut.ac.ir\nwww.x_code.com\ntime iscome\n"<br/>
 
 accuracy,correct_char_N,total_N=accuracy_cal(text,ideal_text,ignor_space=True,less_than_char_ignore=True,ignor_char_num=1)<br/>
-print("accuracy = "+str(accuracy)+"\ntotal length = ",str(total_N)+"\ncorrect char length = ",str(correct_char_N))<br/>
+print("accuracy = "+str(accuracy)+"\ntotal length = "+str(total_N)+"\ncorrect char length = "+str(correct_char_N))<br/>
 the result is:<br/>
 &emsp;{accuracy = 100.0<br/>
 &emsp;total length =  76<br/>
