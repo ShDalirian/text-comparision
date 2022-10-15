@@ -45,7 +45,7 @@ text:str=       "this is a test\nmy email address is: sh.dalirian@ut.ac.ir\nwww.
 accuracy,correct_char_N,total_N=accuracy_cal(text,ideal_text,ignor_space=True,less_than_char_ignore=True,ignor_char_num=1)<br/>
 print("accuracy = "+str(accuracy)+"\ntotal length = ",str(total_N)+"\ncorrect char length = ",str(correct_char_N))<br/>
 the result is:<br/>
-\t{accuracy = 100.0<br/>
+&emsp;{accuracy = 100.0<br/>
 \ttotal length =  76<br/>
 \tcorrect char length =  76}<br/>
  
