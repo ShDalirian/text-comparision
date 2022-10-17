@@ -1,7 +1,4 @@
-from xmlrpc.client import boolean
-
-
-def accuracy_cal(detected_text:str,ideal_text:str,ignor_space:boolean=True,less_than_char_ignore:boolean=True,ignor_char_num:int=1):
+def accuracy_cal(detected_text:str,ideal_text:str,ignor_space:bool=True,less_than_char_ignore:bool=True,ignor_char_num:int=1):
     sub:int=0
     sub_ideal:int=0
     if ideal_text[-1]!="\n":
