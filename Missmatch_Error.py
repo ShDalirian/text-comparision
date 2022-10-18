@@ -1,4 +1,4 @@
-def accuracy_cal(detected_text:str,ideal_text:str,ignor_space:bool=True,less_than_char_ignore:bool=True,ignor_char_num:int=1):
+def accuracy_cal(detected_text:str,ideal_text:str,ignor_space:bool=True,less_than_char_ignore:bool=True,ignor_char_num:int=1,endfire_priority:bool=True):
     sub:int=0
     sub_ideal:int=0
     if ideal_text[-1]!="\n":
@@ -28,7 +28,8 @@ def accuracy_cal(detected_text:str,ideal_text:str,ignor_space:bool=True,less_tha
 
         else:
             if CI_text.find("\n")!=-1 and CD_text.find("\n")!=-1:
-                if CI_text[CI_text.find("\n")-1].upper()==CD_text[CD_text.find("\n")-1].upper():
+                if (CI_text[CI_text.find("\n")-1].upper()==CD_text[CD_text.find("\n")-1].upper() and CI_text[CI_text.find("\n")-2].upper()==CD_text[CD_text.find("\n")-2].upper()
+                    and endfire_priority):
                     LI:int=CI_text.find("\n")-1
                     LD:int=CD_text.find("\n")-1
                     b=+1
@@ -37,7 +38,7 @@ def accuracy_cal(detected_text:str,ideal_text:str,ignor_space:bool=True,less_tha
                     LD=0
                     b=-1
                 for a in range(min(CI_text.find("\n"),CD_text.find("\n"))):
-                    if CI_text[LI-(b*a)].upper()==CD_text[LD-(b*a)].upper() and CI_text[LI-(b*(a+1))].upper()==CD_text[LD-(b*(a+1))].upper():
+                    if CI_text[LI-(b*a)].upper()==CD_text[LD-(b*a)].upper():
                         correct_char +=1
             CI_text=CI_text.replace(CI_text[0:CI_text.find("\n")+1],"",1)
             CD_text=CD_text.replace(CD_text[0:CD_text.find("\n")+1],"",1)
